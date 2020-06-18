@@ -14,6 +14,7 @@
         </div>
         <div class="card-body">
           <%= render 'form' %>
+          <%= link_to "Delete profile", user_path(@user), class: "btn btn-outline-danger btn-lg", method: :delete, data: { confirm: "Are you sure?" } %> 
         </div>
         <div class="card-footer text-muted">
           <small><%= link_to '[ Already have an account? ]', articles_path %> </small>
