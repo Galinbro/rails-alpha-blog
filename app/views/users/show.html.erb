@@ -1,0 +1,23 @@
+
+<!-- Page Header -->
+<header class="masthead" style="height:60px; background-image:url(<%= asset_path 'articles-bg.jpg' %>)">
+  <div class="overlay" >
+  </div>
+</header>
+
+<div class="container">
+    <div class="row justify-content-md-center">
+      <div class="col-5 mt-4">
+        <div class="card text-center shadow mb-5 bg-white rounded">
+          <div class="card-header font-italic">
+            <%= @user.username %> ´s profile
+          </div>
+          <div class="card-body">
+            <%= gravatar_for @user, size: 200 %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <%= render 'articles/article'%>
+</div>
