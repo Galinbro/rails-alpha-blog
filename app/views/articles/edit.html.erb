@@ -1,5 +1,27 @@
-<h1>Edit article</h1>
+<div id="page-content">
+  <!-- Page Header -->
+  <header class="masthead" style="height:60px; background-image:url(<%= asset_path 'articles-bg.jpg' %>)">
+    <div class="overlay" >
+    </div>
+  </header>
 
-<%= render 'form' %>
+<div class="container">
+      <div class="row justify-content-md-center">
+        <div class="col-8 mt-4">
+          <div class="card text-center shadow mb-5 bg-white rounded">
+            <div class="card-header font-italic">
+              Edit article
+            </div>
+            <div class="card-body">
+              <%= render 'form' %>
+            </div>
+            <div class="card-footer text-muted">
+              <small><%= link_to '[ Cancel and return to article listing ]', articles_path %> </small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<%= link_to 'Cancel and return to article listing', articles_path %>
+</div>
