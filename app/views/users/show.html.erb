@@ -6,14 +6,18 @@
 </header>
 
 <div class="container">
+<%= render 'layouts/msg'%>
     <div class="row justify-content-md-center">
       <div class="col-5 mt-4">
         <div class="card text-center shadow mb-5 bg-white rounded">
           <div class="card-header font-italic">
-            <%= @user.username %> ´s profile
+            <%= @user.username %>´s profile
           </div>
           <div class="card-body">
             <%= gravatar_for @user, size: 200 %>
+          </div>
+          <div class="card-footer text-muted">
+            <%= link_to 'Edit your profile', edit_user_path(@user), class: 'btn btn-outline-info' %>
           </div>
         </div>
       </div>
