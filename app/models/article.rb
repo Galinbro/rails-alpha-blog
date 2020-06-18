@@ -1,4 +1,4 @@
-class Article <ApplicationRecord
+class Article < ApplicationRecord
   belongs_to :user
   
   validates :tittle, presence: true, length: { minimum: 6, maximum: 100 }
