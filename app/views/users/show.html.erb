@@ -16,11 +16,11 @@
           <div class="card-body">
             <%= gravatar_for @user, size: 200 %>
           </div>
-          <% if logged_in? && @user == current_user%>
-            <div class="card-footer text-muted">
-                <%= link_to 'Edit your profile', edit_user_path(@user), class: 'btn btn-outline-info' %>
-            </div>
-          <% end %>
+          <div class="card-footer text-muted">
+            <% if logged_in? && @user == current_user%>
+              <%= link_to 'Edit your profile', edit_user_path(@user), class: 'btn btn-outline-info' %>
+            <% end %>
+          </div>
         </div>
       </div>
     </div>
